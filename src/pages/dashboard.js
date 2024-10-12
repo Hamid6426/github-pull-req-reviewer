@@ -25,7 +25,7 @@ export default function Dashboard() {
     <>
       <div className="bg-black flex flex-col justify-center items-center w-screen h-screen text-white text-2xl">
         <div className="w-full max-w-[512px] flex flex-col justify-center items-center">
-          <h1 className="text-4xl font-bold pb-8">
+          <h1 className="text-4xl font-bold pb-8 text-center">
             GitHub Connected Successfully
           </h1>
           <div className="flex flex-col">

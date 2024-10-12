@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         active: true,
         events: ['pull_request'],
         config: {
-          url: 'http://your-server-url/api/webhook-handler',
+          url: 'https://next-pull-request-reviewer.vercel.app/api/webhook-handler',
           content_type: 'json',
         },
       },

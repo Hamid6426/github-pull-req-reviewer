@@ -26,7 +26,7 @@ export default function SetupWebhook() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center text-2xl">
-      <h1 className="font-bold text-4xl pb-8">Setup Webhook for Pull Requests</h1>
+      <h1 className="font-bold text-4xl pb-8 text-center">Setup Webhook for Pull Requests</h1>
       <div className="flex flex-col justify-center items-center w-full">
         <input
           type="text"
