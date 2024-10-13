@@ -3,9 +3,11 @@ import pg from 'pg';
 
 const { Pool } = pg;
 
-// Use the environment variable you just set
+// Use the environment variable or hardcode the connection string for testing
+const connectionString = process.env.POSTGRES_DATABASE;
+
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_DATABASE, // Updated connection string
+  connectionString,
 });
 
 export default async function handler(req, res) {
