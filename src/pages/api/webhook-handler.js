@@ -21,18 +21,18 @@ export default async function handler(req, res) {
       console.log("PR Title:", prTitle);
       console.log("PR Body:", prBody);
 
-      // Send the PR content (title and body) to OpenAI for review
+      // Send the PR title and body to OpenAI for review with a concise prompt
       const openAIResponse = await axios.post(
         'https://api.openai.com/v1/chat/completions',
         {
-          model: 'gpt-3.5-turbo',  // Use the desired OpenAI model
+          model: 'gpt-3.5-turbo',  // Use a free-tier model
           messages: [
             {
               role: 'user',
-              content: `Review the following GitHub pull request: Title: "${prTitle}", Body: "${prBody}"`
+              content: `Check for any issues in this PR: Title: "${prTitle}", Body: "${prBody}". Keep the response short and mention only any issues you find.`
             }
           ],
-          max_tokens: 150,
+          max_tokens: 100,  // Keep token usage low for free-tier
           temperature: 0.7,
         },
         {
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
         }
       );
 
-      const reviewComment = openAIResponse.data.choices[0].message.content.trim(); // Updated access for chat completions
+      const reviewComment = openAIResponse.data.choices[0].message.content.trim(); // Get the response text from GPT
 
       // Post the review comment on the pull request using GitHub API
       const commentResponse = await axios.post(
