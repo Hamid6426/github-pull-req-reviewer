@@ -1,5 +1,7 @@
 // pages/api/store-token.js
-import { Pool } from 'pg';
+import pg from 'pg';
+
+const { Pool } = pg;
 
 // Use the environment variable you just set
 const pool = new Pool({
