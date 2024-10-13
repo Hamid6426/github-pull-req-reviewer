@@ -55,29 +55,28 @@ export default function SetupWebhook() {
   };
 
   return (
-  <div className="relative w-full flex flex-col justify-center items-center text-2xl">
-      <h1 className="font-bold text-4xl pb-8 text-center">
-        Setup Webhook for Pull Requests
-      </h1>
-      <div className="flex flex-col justify-center items-center w-full">
+    <div className="bg-slate-900 w-80 h-fit py-4 flex flex-col justify-center items-center">
+    <div className="text-center pb-2 text-2xl font-bold text-blue-600">PULL REQUEST</div>  
+    <div className="text-center pb-4 text-2xl font-bold text-green-600">WEBHOOK SETUP</div>  
+      <div className="flex flex-col justify-center items-center w-full px-4 pb-2">
         <input
           type="text"
           placeholder="Repository Owner"
           value={repoOwner}
           onChange={(e) => setRepoOwner(e.target.value)}
-          className="text-black px-4 py-2 mt-4"
+          className="text-black w-full py-2 px-4 mt-2 rounded-lg text-xl"
         />
         <input
           type="text"
           placeholder="Repository Name"
           value={repoName}
           onChange={(e) => setRepoName(e.target.value)}
-          className="text-black px-4 py-2 mt-4"
+          className="text-black w-full py-2 px-4 mt-4  rounded-lg text-xl"
         />
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="text-center text-lg mt-4" style={{ color: "orange" }}>{error}</p>}
         <button
           onClick={handleWebhookSetup}
-          className="px-4 py-2 font-bold bg-green-600 mt-8 hover:bg-blue-600"
+          className="w-full py-3 font-bold bg-green-600 mt-8 text-xl hover:bg-blue-600 rounded-full text-center"
         >
           Setup Webhook
         </button>

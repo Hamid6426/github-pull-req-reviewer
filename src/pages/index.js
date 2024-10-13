@@ -14,21 +14,50 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-  
   const handleGitHubAuth = () => {
-    window.location.href = '/api/auth';
+    window.location.href = "/api/auth";
   };
 
   return (
-    <div className="w-full">
-      <div className="absolute top-2 left-4 text-2xl text-white hover:text-blue-600 font-bold"><Link href='/'>Home</Link> </div>
-    <div className="bg-black flex flex-col justify-center items-center w-screen h-screen text-white text-2xl">
-      <div className="w-full max-w-[768px] flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold pb-8 text-center">GitHub OAuth App</h1>
-      <button className="py-3 px-6 font-bold bg-green-600 hover:bg-blue-600" onClick={handleGitHubAuth}>Connect GitHub</button>
+    <div className="w-full h-screen bg-slate-950 ">
+      
+      <div className="bg-slate-900 flex flex-row h-12 gap-12 items-center justify-center w-full absolute text-lg font-bold">
+        <Link href="/" className="text-white hover:text-blue-600 ">
+          Home
+        </Link>
+        <Link href="/dashboard" className="text-white hover:text-blue-600 ">
+          Setup
+        </Link>{" "}
+      </div>
+
+      <div className=" flex flex-col justify-center items-center w-screen pt-16 h-fit text-white text-2xl">
+        <div className=" w-80 flex flex-col justify-center items-center">
+          <div className="text-3xl font-bold pb-2 text-center text-green-600">
+            GITHUB
+          </div>
+          <div className="text-2xl font-bold pb-2 text-center text-blue-600">
+            PULL REQUEST REVIEWER
+          </div>
+          <div className="text-lg font-bold pb-4 text-center">
+            POWERED BY GEMINI
+          </div>
+
+          <div className="bg-slate-900 rounded-2xl py-12 w-full flex flex-col justify-center items-center px-4">
+            <div className="text-center pb-3 text-2xl font-bold text-blue-600">
+              SIGN IN WITH YOUR
+            </div>
+            <div className="text-center pb-8 text-2xl font-bold text-green-600">
+              GITHUB ACCOUNT
+            </div>
+            <button
+              className="py-3 w-full font-bold bg-green-600 hover:bg-blue-600 rounded-full"
+              onClick={handleGitHubAuth}
+            >
+              Connect Github
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-
   );
 }
