@@ -55,9 +55,7 @@ export default function SetupWebhook() {
   };
 
   return (
-    <div className="relative">
-      <div className="absolute top-4 left-4 text-2xl text-white hover:text-blue-600 font-bold"><Link href='/'>Home</Link> </div>
-    <div className="w-full flex flex-col justify-center items-center text-2xl">
+  <div className="relative w-full flex flex-col justify-center items-center text-2xl">
       <h1 className="font-bold text-4xl pb-8 text-center">
         Setup Webhook for Pull Requests
       </h1>
@@ -84,7 +82,6 @@ export default function SetupWebhook() {
           Setup Webhook
         </button>
       </div>
-    </div>
     </div>
   );
 }
