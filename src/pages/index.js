@@ -33,7 +33,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="h-full flex flex-col justify-center items-center w-screen pt-16 text-white text-2xl">
+      <div className="h-full flex flex-col justify-center items-center w-screen text-white text-2xl">
         <div className=" w-80 flex flex-col justify-center items-center">
           <div className="text-3xl font-bold pb-2 text-center text-green-600">
             GITHUB

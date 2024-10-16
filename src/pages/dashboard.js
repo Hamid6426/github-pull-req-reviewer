@@ -39,7 +39,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="w-full h-full flex flex-col justify-center items-center py-4">
+        <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="w-80 flex flex-col justify-center items-center">
             <div className="text-3xl font-bold pb-2 text-center text-green-600">
               GITHUB
