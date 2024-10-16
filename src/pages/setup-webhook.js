@@ -55,7 +55,7 @@ export default function SetupWebhook() {
   };
 
   return (
-    <div className="bg-slate-900 w-80 h-fit py-4 flex flex-col justify-center items-center">
+    <div className="bg-slate-900 w-80 h-fit py-4 flex flex-col justify-center items-center rounded-2xl">
     <div className="text-center pb-2 text-2xl font-bold text-blue-600">PULL REQUEST</div>  
     <div className="text-center pb-4 text-2xl font-bold text-green-600">WEBHOOK SETUP</div>  
       <div className="flex flex-col justify-center items-center w-full px-4 pb-2">

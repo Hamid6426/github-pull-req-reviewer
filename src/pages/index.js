@@ -27,10 +27,13 @@ export default function Home() {
         </Link>
         <Link href="/dashboard" className="text-white hover:text-blue-600 ">
           Setup
-        </Link>{" "}
+        </Link>
+        <Link href="/about" className="text-white hover:text-blue-600 ">
+          About
+        </Link>
       </div>
 
-      <div className=" flex flex-col justify-center items-center w-screen pt-16 h-fit text-white text-2xl">
+      <div className="h-full flex flex-col justify-center items-center w-screen pt-16 text-white text-2xl">
         <div className=" w-80 flex flex-col justify-center items-center">
           <div className="text-3xl font-bold pb-2 text-center text-green-600">
             GITHUB
